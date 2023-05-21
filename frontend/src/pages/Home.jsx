@@ -42,7 +42,9 @@ export const Home = () => {
                 id={post._id}
                 title={post.title}
                 imageUrl={
-                  post.imageUrl ? "http://localhost:4444" + post.imageUrl : ""
+                  post.imageUrl
+                    ? `${process.env.REACT_APP_API_URL}` + post.imageUrl
+                    : ""
                 }
                 user={post.user}
                 createdAt={"12 июня 2022 г."}
